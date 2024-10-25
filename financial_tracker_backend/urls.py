@@ -17,12 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from transactions.views import CategoryViewSet, TransactionViewSet, BalanceViewSet
+from transactions.views import CategoryViewSet, TransactionViewSet
 
 router = DefaultRouter()
 router.register(r'categories', CategoryViewSet)
 router.register(r'transactions', TransactionViewSet)
-router.register(r'balances', BalanceViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
